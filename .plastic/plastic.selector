@@ -1,0 +1,4 @@
+repository "Unity VFX Graph 2025-07-16_21-45-04/Unity VFX Graph@33260540342675@cloud"
+  path "/"
+    br "/main"
+    co "/main"
