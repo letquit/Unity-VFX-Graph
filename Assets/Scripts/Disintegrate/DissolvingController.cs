@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class DissolvingController : MonoBehaviour
 {
     public SkinnedMeshRenderer skinnedMesh;
+    public VisualEffect VFXGraph;
     public float dissolveRate = .0125f;
     public float refreshRate = .025f;
 
@@ -26,6 +28,9 @@ public class DissolvingController : MonoBehaviour
 
     private IEnumerator DissolveCo()
     {
+        if (VFXGraph != null)
+            VFXGraph.Play();
+        
         if (skinnedMaterials.Length > 0)
         {
             float counter = 0;
